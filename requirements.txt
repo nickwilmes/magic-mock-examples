@@ -1,0 +1,7 @@
+requests
+PyYAML==5.4.1
+boto3
+black
+pytest
+coverage
+pytest-cov
