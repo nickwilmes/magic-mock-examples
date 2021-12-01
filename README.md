@@ -1,5 +1,5 @@
 # magic-mock-examples
-This repo contains examples of magic mock usage for unit testing.  Feel free to fork this repo and play around with the example test cases to get a better understanding of Magic Mock and its many features.
+This repo contains examples of [MagicMock](https://docs.python.org/3/library/unittest.mock.html) usage for unit testing.  Feel free to fork this repo and play around with the example test cases to get a better understanding of [MagicMock](https://docs.python.org/3/library/unittest.mock.html) and its many features.
 
 ## Running Examples
 
