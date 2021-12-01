@@ -13,7 +13,7 @@ class Exception2(Exception):
 
 def foo() -> Any:
     try:
-        return bar(1, 2)+bar(3, 4)
+        return bar(1, 2) + bar(3, 4)
     except Exception1:
         return 0
 

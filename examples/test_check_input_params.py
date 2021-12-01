@@ -7,7 +7,7 @@ def foo(a: Any, b: Any) -> Any:
 
 
 def bar(a: Any, b: Any) -> Any:
-    return a+b
+    return a + b
 
 
 @patch(f"{__name__}.bar")
@@ -19,7 +19,6 @@ def test_foo__exact_parameter_validation(bar_mock: MagicMock):
 
     bar_mock.assert_called_once_with(a, b)
     assert result == 2
-
 
 
 @patch(f"{__name__}.bar")

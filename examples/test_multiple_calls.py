@@ -5,8 +5,9 @@ from unittest.mock import MagicMock, patch
 def foo() -> Any:
     sum = 0
     for i in range(3):
-        sum += bar(i, i+1)
-    return sum    
+        sum += bar(i, i + 1)
+    return sum
+
 
 def bar(a: Any, b: Any) -> Any:
     return 0

@@ -21,6 +21,7 @@ def get_accounts_2() -> dict:
     d2 = yaml.safe_load(s3_response_object2["Body"].read())
     return (d1, d2)
 
+
 @patch("boto3.client")
 def test_foo__mock_reading_of_s3_file(boto_client_mock):
     mock_s3_client = MagicMock()
@@ -39,11 +40,13 @@ def test_foo__mock_reading_of_s3_file(boto_client_mock):
 
     result = get_accounts()
 
-    assert result == {"accounts": [
-        {"name": "test account 1", "number": "1231231231"},
-        {"name": "test account 2", "number": "4564564545"},
-        {"name": "test account 3", "number": "7898797897"},
-    ]}
+    assert result == {
+        "accounts": [
+            {"name": "test account 1", "number": "1231231231"},
+            {"name": "test account 2", "number": "4564564545"},
+            {"name": "test account 3", "number": "7898797897"},
+        ]
+    }
     mock_s3_client.get_object.assert_called_once()
 
 
@@ -75,13 +78,17 @@ def test_foo2__mock_reading_of_s3_file(boto_client_mock):
 
     result1, result2 = get_accounts_2()
 
-    assert result1 == {"accounts": [
-        {"name": "test account 1", "number": "1231231231"},
-        {"name": "test account 2", "number": "4564564545"},
-        {"name": "test account 3", "number": "7898797897"},
-    ]}
-    assert result2 == {"accounts": [
-        {"name": "test account 4", "number": "1231231231"},
-        {"name": "test account 5", "number": "4564564545"},
-        {"name": "test account 6", "number": "7898797897"},
-    ]}
+    assert result1 == {
+        "accounts": [
+            {"name": "test account 1", "number": "1231231231"},
+            {"name": "test account 2", "number": "4564564545"},
+            {"name": "test account 3", "number": "7898797897"},
+        ]
+    }
+    assert result2 == {
+        "accounts": [
+            {"name": "test account 4", "number": "1231231231"},
+            {"name": "test account 5", "number": "4564564545"},
+            {"name": "test account 6", "number": "7898797897"},
+        ]
+    }
